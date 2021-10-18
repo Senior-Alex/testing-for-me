@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import MainPage from '@/components/MainPage'
+import Map from '@/components/MainPage/components/Map/Map.vue'
+
 Vue.use(VueRouter)
 
 let router = new VueRouter({
@@ -8,7 +11,14 @@ let router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: ''
+      component: MainPage,
+      children: [
+        {
+          path: '/map',
+          name: 'map',
+          component: Map
+        }
+      ]
     }
   ]
 })
