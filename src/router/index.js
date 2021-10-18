@@ -1,26 +1,26 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-import MainPage from '@/components/MainPage'
-import Map from '@/components/MainPage/components/Map/Map.vue'
+import MainPage from "@/components/MainPage";
+import Map from "@/components/MainPage/components/Map/Map.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 let router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
-      path: '/',
+      path: "/",
       component: MainPage,
       children: [
         {
-          path: '/map',
-          name: 'map',
+          path: "/map",
+          name: "map",
           component: Map
         }
       ]
     }
   ]
-})
+});
 
-export default router
+export default router;

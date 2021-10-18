@@ -10,15 +10,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'SideBar',
-    data: () => ({
-      items: [
-        { title: 'Карта', icon: 'mdi-map-search', link: '/map' }
-      ]
-    })
-  }
+export default {
+  name: "SideBar",
+  data: () => ({
+    items: [{ title: "Карта", icon: "mdi-map-search", link: "/map" }]
+  })
+};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
