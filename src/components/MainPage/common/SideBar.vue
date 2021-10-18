@@ -1,12 +1,9 @@
 <template lang="pug">
-  v-app
-    v-app-bar(app='', color='blue')
-      v-toolbar-title
-      v-spacer
-    v-navigation-drawer(floating permanent app width='220' color='indigo' class="pt-15" dark)
-      v-list(dense='', rounded='')
-        v-list-item(v-for='item in items', :key='item.title', :to="item.link")
-          v-list-item-icon
+  v-navigation-drawer(app width="220" permanent style="background: #4292fc" dark)
+    v-layout(column fill-height class="pt-15")
+      v-list
+        v-list-item(v-for="item in items", :key="item.title", :to="item.link")
+          v-list-item-action
             v-icon {{ item.icon }}
           v-list-item-content
             v-list-item-title {{ item.title }}
@@ -15,13 +12,11 @@
 <script>
   export default {
     name: 'SideBar',
-    data () {
-      return {
-        items: [
-          { title: 'Карта', icon: 'mdi-map-search', link: '/map' }
-        ]
-      }
-    }
+    data: () => ({
+      items: [
+        { title: 'Карта', icon: 'mdi-map-search', link: '/map' }
+      ]
+    })
   }
 </script>
 
