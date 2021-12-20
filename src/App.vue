@@ -1,6 +1,6 @@
 <template lang="pug">
   div(id="app")
-    router-view
+    router-views
 </template>
 
 <script></script>
